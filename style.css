@@ -1,0 +1,455 @@
+*{
+	box-sizing: border-box;
+	font-family: 'Fira Sans', sans-serif;
+
+}
+body{
+	margin: 0;
+
+}
+h1{
+	font-size: 2.5rem;
+	text-align: center;
+}
+h2{
+	font-size: 1.5rem;
+	text-align:center;
+
+}
+a{
+	color: white;
+	font-size: 1.2rem;
+	text-decoration: none;
+}
+p{
+	font-size: 1.2rem;
+	text-align: justify;
+}
+.dotted-hr{
+	border: dotted 6px white;
+	border-bottom: none;
+	margin: 20px auto;
+	width: 70px;
+}
+
+[class*="col-"]{
+	float: left;
+	padding: 10px;
+}
+
+/*for mobile*/
+[class*="col-"]{
+	width: 100%;
+}
+.navbar{
+	background-color:#033E3E;
+	padding: 1% 7%;
+	text-align: center;
+}
+.navbar h1{
+	color: white;
+	margin: 0;
+	padding-top: 10px;
+
+}
+.navbar-menu{
+	display: flex;
+	flex-direction: column;
+	text-transform: uppercase;
+
+}
+.navbar-menu a{
+	background-color: #0c6168;
+	border-radius: 10px;
+	margin: 7px 0px;
+	padding: 10px;
+
+}
+.navbar-menu a:hover{
+	background-color: #3B9C9C;
+}
+
+.navbar::after{
+	content: '';
+	display: table;
+	clear: both;
+}
+
+.logo{
+	height: 50px;
+	width: 50px;
+	border-radius: 100px;
+	transition: 3s;
+}
+.logo:hover{
+	transform: rotate3d(1, 1, 1, 360deg);
+}
+/*navabar end*/
+
+/*profile start*/
+
+.profile{
+	padding: 130px 10px;
+	position: relative;
+	text-align: center;
+}
+.pr{
+	height: 200px;
+	width: 200px;
+	border-radius: 100px;
+	transition: 3s;
+}
+.profile-desc h1{
+	font-family:'Satisfy',cursive ;
+	font-size: 3rem;
+}
+.profile-desc P{
+	color: gray;
+	text-align: center;
+	width: 90%;
+	margin: 0 auto 20px auto;
+
+}
+.profile::after{
+	content: '';
+	display: table;
+	clear: both;
+}
+
+
+/*profile end*/
+
+/*about me*/
+.about-me{
+	background-color:#008B8B;
+	padding: 1% 7%;
+	color: white;
+	text-align: center;
+	font-family: 'montserrat',sans-serif;
+
+}
+.myimage{
+	border: 5px solid whitesmoke;
+	height: 220px;
+	width: 200px;
+	border-radius: 50%;
+}
+.about-me p{
+	text-align: center;
+
+}
+.about-me a{
+	font-size: 1.2rem;
+
+}
+.cv-button{
+	background-color: #052d2f;
+	color: whitesmoke;
+	border: none;
+	border-radius: 12px;
+	padding: 15px;
+	font-size: 1rem;
+	cursor: pointer;
+	text-align: center;
+	margin: 10px;
+
+}
+.cv-button:hover{
+	box-shadow: 0px 2px 3px 5px black;
+}
+
+.about-me::after{
+	clear: both;
+	display: table;
+	content: '';
+
+}
+/*experience*/
+.experience{
+	padding: 1% 0%;
+	
+
+}
+.card-icon{
+	text-align: center;
+}
+.card-icon img{
+	border: 3px solid black;
+	padding: 10px;
+	height: 80px;
+	width: 80px;
+	border-radius: 50%;
+	
+}
+.experience .card{
+	background-color:#a39e9e;
+	border-radius: 5px;
+	padding: 10px;
+	transition: 0.3s;
+	height: 700px;
+}
+.card-title h2{
+	background-color:#616161;
+	color: black;
+	padding: 10px;
+	text-align: center;
+}
+.experience .card:hover{
+	box-shadow: 0 4px 8px 5px black;
+
+}
+.experience::after{
+	clear: both;
+	display: table;
+	content: '';
+}
+.card-desc a{
+	background-color: #616161;
+	color: darkred;
+}
+.card-desc a:hover{
+	box-shadow: 0 4px 8px 5px black;
+
+}
+/*skill*/
+.skills-container{
+	padding-right: 45px;
+
+}
+.skills-container li{
+	list-style: none;
+	font-weight: bold;
+	margin: 30px 10px;
+	position: relative;
+	text-transform: uppercase;
+
+}
+.skills-container li::before{
+	content: '';
+	position: absolute;
+	top: calc(100% + 5px);
+	left: 0;
+	width: 100%;
+	height: 10px;
+	background-color:#808080;
+	border-radius: 1000px;
+
+}
+.skills-container li::after{
+	content: '';
+	position: absolute;
+	top: calc(100% + 5px);
+	left: 0;
+	width: 0%;
+	height: 10px;
+	background-color:#2F4F4F;
+	border-radius: 1000px;
+	animation-duration: 3s;
+	animation-delay: 2s;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards ;
+	animation-iteration-count: 3;
+
+
+}
+.skills-container li.html::after{
+	animation-name: html;
+
+}
+@keyframes html{
+	to{
+		width: 80%;
+	}
+}
+.skills-container li.css::after{
+	animation-name: css;
+
+}
+@keyframes css{
+	to{
+		width: 75%;
+	}
+}
+.skills-container li.bootstrap::after{
+	animation-name: bootstrap;
+
+}
+@keyframes bootstrap{
+	to{
+		width: 30%;
+	}
+}
+.skills-container li.javascript::after{
+	animation-name: javascript;
+
+}
+@keyframes javascript{
+	to{
+		width: 35%;
+	}
+}
+.skills-container li.c::after{
+	animation-name: c;
+
+}
+@keyframes c{
+	to{
+		width: 90%;
+	}
+}
+
+.skills-container li.java::after{
+	animation-name: java;
+
+}
+@keyframes java{
+	to{
+		width: 70%;
+	}
+
+}
+.skills-container li.mysql::after{
+	animation-name: mysql;
+
+}
+@keyframes mysql{
+	to{
+		width: 95%;
+	}
+
+}
+.skills-container li.msword::after{
+	animation-name: msword;
+
+}
+@keyframes msword{
+	to{
+		width: 97%;
+	}
+
+}
+.skills-container li.powerpoint::after{
+	animation-name: powerpoint;
+
+}
+@keyframes powerpoint{
+	to{
+		width: 96%;
+	}
+
+}
+.skills-container li.github::after{
+	animation-name: github;
+
+}
+@keyframes github{
+	to{
+		width: 40%;
+	}
+}
+
+.contact{
+	background-color:#2e8b57;
+	padding: 1% 7%;
+	color: white;
+	text-align: center;
+	font-family: 'montserrat',sans-serif;
+
+}
+.contact:hover{
+box-shadow: 0 4px 8px 5px black;
+}
+.contact input, textarea{
+	width: 100%;
+	padding: 10px;
+	font-size: 1rem;
+	text-align: center;
+	border: none;
+	border-radius: 10px;
+	resize: none;
+
+}
+
+.contact button{
+	border: 1px solid whitesmoke;
+	border-radius: 13px;
+	background-color:#2F4F4F ;
+	color: white;
+	cursor: pointer;
+	padding: 12px;
+	margin: 10px;
+
+}
+.contact button:hover{
+	box-shadow: 0 4px 8px 5px black;
+
+	}
+.linkedin{
+	margin: 10px;
+	background-color: blue;
+	padding: 5px;
+	border-radius: 25px;
+	
+
+}
+.linkedin:hover{
+	box-shadow: 0px 1px 1px 1px black;
+}
+
+.contact .fb{
+	margin: 10px;
+	background-color: darkblue;
+	padding: 5px;
+	border-radius: 30px;
+
+
+}
+.fb:hover{
+	box-shadow: 0px 1px 1px 1px black;
+}
+.youtube{
+	margin: 10px;
+	background-color: darkred;
+	padding: 5px;
+	border-radius: 25px;
+	
+
+}
+.youtube:hover{
+	box-shadow: 0px 1px 1px 1px black;
+}
+.last-bar{
+	background-color:  #033E3E;
+	text-align: center;
+}
+
+.lastbar-menu{
+	text-align: right;
+	display: justify;
+	flex-direction: row;
+	text-transform: uppercase;
+	padding: 10px;
+
+
+}
+.lastbar-menu a{
+	text-align: center;
+	background-color:  #033E3E;
+	border-radius: 10px;
+	margin: 7px 0px;
+	padding: 10px;
+
+}
+.lastbar-menu a:hover{
+	background-color: #0c6168;
+}
+
+.lb-desc{
+
+	size: 0.7rem;
+	color: darkgray;
+	text-align: right;
+	margin-top: 35px;
+	margin-bottom: 0;
+	margin-right: 0;
+}
